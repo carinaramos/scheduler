@@ -3,8 +3,7 @@ import { hasConflict, getCourseTerm, getCourseNumber } from '../utilities/times.
 
 const toggle = (x, lst) => (
     lst.includes(x) ? lst.filter(y => y !== x) : [x, ...lst]
-  );
-  
+);
   
 const Course = ({ course, selected, setSelected }) => {
     const isSelected = selected.includes(course);
