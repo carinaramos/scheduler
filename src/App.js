@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
 import CourseList from './CourseList';
+import './App.css';
 
 const schedule = {
   "title": "CS Courses for 2018-2019",
@@ -29,7 +30,7 @@ const schedule = {
 };
 
 const App = () =>  (
-  <div>
+  <div className="container">
     <Banner title={ schedule.title } />
     <CourseList courses={ schedule.courses } />
   </div>
