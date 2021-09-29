@@ -8,6 +8,14 @@ export const getCourseNumber = course => (
 course.id.slice(1, 4)
 );
 
+export const getCourseMeetingData = course => {
+  const meets = prompt('Enter meeting data: MTuWThF hh:mm-hh:mm', course.meets);
+  const valid = !meets || timeParts(meets).days;
+  if (valid) return meets;
+  alert('Invalid meeting data');
+  return null;
+};
+
 const days = ['M', 'Tu', 'W', 'Th', 'F'];
 
 const daysOverlap = (days1, days2) => ( 
